@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <h1>Available Movies</h1>
+    <ul>
+        {% for movie in movies %}
+            <li>
+                <h2>{{ movie.title }}</h2>
+                <p>Showtime: {{ movie.time }}</p>
+                <a href="/book/{{ movie.id }}">Book Now</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
